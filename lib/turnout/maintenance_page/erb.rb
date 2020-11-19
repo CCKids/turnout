@@ -7,6 +7,8 @@ require_relative '../i18n/internationalization'
 module Turnout
   module MaintenancePage
     class Erb < Turnout::MaintenancePage::HTML
+      
+      include ActionView::Helpers::AssetTagHelper
 
       def content
         Turnout::Internationalization.initialize_i18n(@options[:env])
